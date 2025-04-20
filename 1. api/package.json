@@ -1,0 +1,18 @@
+{
+  "name": "1.-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev1": "node --watch 01.http.js",
+    "dev2": "node --watch 02.routing.js",
+    "dev3": "node --watch 03.express.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "5.1.0"
+  }
+}
