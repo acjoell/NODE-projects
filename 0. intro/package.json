@@ -1,0 +1,27 @@
+{
+  "name": "node-desde-0",
+  "version": "1.0.0",
+  "description": "Tutorial desde 0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --env-file .env --watch index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "acjoell",
+  "license": "ISC",
+  "dependencies": {
+    "picocolors": "1.1.1"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ]
+  }
+}
