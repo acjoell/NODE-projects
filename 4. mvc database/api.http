@@ -1,0 +1,49 @@
+### Recuperar todas las peliculas
+GET http://localhost:3000/movies
+
+### Recuperar pelicula por id
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar todas las peliculas por un género
+GET http://localhost:3000/movies?genre=crime
+
+### Agregar una pelicula
+POST http://localhost:3000/movies
+content-type: application/json
+
+{
+    "title": "Title name",
+    "year": 2025,
+    "director": "Unknown",
+    "duration": 123,
+    "genre": [
+      "Action",
+      "Crime"
+    ],
+    "rate": 8.8,
+    "poster": "http://www.google.com"
+}
+
+### Actualizar una pelicula
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+content-type: application/json
+
+{
+    "year": 1999
+}
+
+### Elminar pelicula por id
+DELETE http://localhost:3000/movies/46b486e7-2952-11f0-89e4-7c10c93e425b
+
+
+### idempotencia:
+### Realizar una accion varias veces y conseguir siempre el mismo resultado
+
+### POST es idempotente
+### POST: Crear un recurso nuevo
+
+### PUT es idempotente
+### PUT: Actualizar totalmente un recurso existente o crearlo si no existe
+
+### PATCH es idempotente en principio (updatedAt pues dejaria una marca que no lo dejaria ser idempotente)
+### PATCH: Actualizar parcialmente un recurso existente
