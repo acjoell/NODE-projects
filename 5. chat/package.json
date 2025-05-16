@@ -1,0 +1,21 @@
+{
+  "name": "5.-chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch ./server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@libsql/client": "^0.15.6",
+    "dotenv": "^16.5.0",
+    "express": "5.1.0",
+    "morgan": "1.10.0",
+    "socket.io": "4.8.1"
+  }
+}
