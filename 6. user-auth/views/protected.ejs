@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Hola <%= username %></h1>
+    <div class="user-info">
+      <p>Este contenido esta protegido</p>
+      <button id="close-session">Logout</button>
+    </div>
+  </div>
+
+  <script>
+    const $ = el => document.querySelector(el)
+
+    const $logoutButton = $('#close-session')
+
+    $logoutButton?.addEventListener('click', e => {
+      e.preventDefault()
+      fetch('/logout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(res => {
+        console.log(res)
+        window.location.href = '/'
+      })
+    })
+  </script>
+
+</body>
+</html>
